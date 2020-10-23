@@ -1,28 +1,35 @@
-# This is a large heading
+#  Markdown stuff
+## Level 2 heading blah **blah**
 
-## This is a smaller heading
+### To-do list
+- Learn git
+- practice BASH
+- update CV
+- write programmes
 
-And as **imagination** bodies forth,
-The forms of things *unknown*, the poet’s pen,
-Turns them to shapes and gives to airy nothing,
-A local *habitation* and a **name**.
+Link to [the course](https://github.com/seankross/the-unix-workbench) on unix and bash
 
-- This is
-- an unordered
-- list
-
-1. This is
-2. an ordered
-3. list
-
-Here is `some code` in the middle of a sentence.
+## My fibonacci function
 
 ```
-This is
-a block
-of code
-```
+function fib {
 
-Here is how you make [a link](https://www.wikipedia.org/).
-
-![This is an image.](https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
+local l0=1
+local l1=0
+if [[ $1 -eq 1 ]]
+  then echo 0
+elif [[ $1 -eq 2 ]]
+  then echo "0 1"
+else
+  local arr=($l1 $l0)
+  for((index=3;index<=$1;index++))
+  do
+    let l=l1+l0 
+    let l1=l0
+    let l0=l
+    arr+=($l)
+  done
+  echo ${arr[*]}
+fi
+}
+'''
